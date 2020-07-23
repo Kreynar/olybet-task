@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <top-menu />
+    <div class="flex">
+      <side-menu class="hidden lg:flex m-3 mr-2" />
+      <bettings-history class="mt-6 mx-3" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopMenu from "./components/TopMenu.vue";
+import SideMenu from "./components/SideMenu.vue";
+import BettingsHistory from "./components/BettingsHistory/BettingsHistory.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TopMenu,
+    SideMenu,
+    BettingsHistory,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
